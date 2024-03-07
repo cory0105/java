@@ -1,4 +1,4 @@
-public class String_20240305 {
+public class String_0305 {
     public static void main(String[] args) {
 
         // String 클래스의 첫번째 특징

@@ -119,5 +119,24 @@ public class Scanner_0306 {
                 }
             }
         }
+
+        {
+            String[] members = {"Steve", "Tom", "Michael", "Laura", "Jessica", "Amia"};
+            Scanner sc = new Scanner(System.in);
+            System.out.print("이름을 입력하시오 : ");
+            String Name = sc.nextLine();
+            int k=0;
+            for ( ; k < members.length; k++) {
+                if (members[k].equalsIgnoreCase(Name)) {
+                    System.out.println(Name + "님 환영합니다.");
+                    break;
+                }
+            }
+            if (k == members.length) {
+                System.out.println("회원가입을 해주세요.");
+            }
+        }
+
+
     }
 }

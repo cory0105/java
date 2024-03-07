@@ -1,4 +1,4 @@
-public class array_20240304 {
+public class array_0304 {
     public static void main(String[] args) {
 
         //배열의 기본 선언법

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Array_20240305 {
+public class Array2_0305 {
     public static void main(String[] args) {
         // 기본자료형의 복사 => 값 복사
         int a=3;

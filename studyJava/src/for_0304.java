@@ -1,4 +1,4 @@
-public class for_20240304 {
+public class for_0304 {
     public static void main(String[] args) {
         //for 반복문의 기본형
         for(int i=0; i<10; i++){
