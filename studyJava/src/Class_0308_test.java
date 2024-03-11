@@ -42,23 +42,6 @@ public class Class_0308_test {
         }
     }
 
-    public static void c(int[] num){
-        System.out.println("양의 정수 10개를 입력하시오.");
-        for (int i=0; i<num.length; i++){
-            Scanner sc = new Scanner(System.in);
-            num[i] = sc.nextInt();
-            if (num[i]<=0){
-                System.out.println("방금 입력하신 값은 양의 정수가 아닙니다. 다시 입력하시오.");
-                i--;
-            }
-        }
-        for (int i=0; i<num.length; i++){
-            if(num[i]%3==0){
-                System.out.println( num[i]);
-            }
-        }
-    }
-
     public static int[] input(int n){
         System.out.println("양의 정수 " + n + "개를 입력하시오.");
         int[] num = new int[n];

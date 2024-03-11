@@ -17,6 +17,12 @@ public class Test_Random {
         for (int i=0; i<a.length; i++){
             System.out.print(i+1+"번 : ");
             user[i] = sc.nextInt();
+            if(user[i]<1 || user[i]>5){
+                i--;
+                System.out.println("잘못 입력하셨습니다.");
+            }
+        }
+        for (int i=0; i<a.length; i++){
         }
         System.out.println(Arrays.toString(user));
 
