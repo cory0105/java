@@ -8,7 +8,7 @@ public class Exam3 {
 
 //        char[] charArray = str.toCharArray();
 //        for (int i=0; i<charArray.length; i++){
-//            sum = sum + charArray[i]-48;
+//            sum = sum + (charArray[i] - '0');
 //        }
 //        System.out.println("합계는 " + sum); // 15
 
