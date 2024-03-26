@@ -17,8 +17,13 @@ public class Exam3 {
 //        }
 //        System.out.println("합계는 " + sum); // 15
 
+//        for (int i=0; i<str.length(); i++){
+//            sum = sum + Character.getNumericValue(str.charAt(i));
+//        }
+//        System.out.println("합계는 " + sum); // 15
+
         for (int i=0; i<str.length(); i++){
-            sum = sum + Character.getNumericValue(str.charAt(i));
+            sum = sum + Integer.valueOf(String.valueOf(str.charAt(i)));
         }
         System.out.println("합계는 " + sum); // 15
     }
