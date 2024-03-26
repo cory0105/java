@@ -12,7 +12,7 @@ public class Triangle implements Shape{ // 정삼각형일때
 
     @Override
     public double calculateArea() {
-        return (base * length) / 2;
+        return base * length * 0.5;
     }
 
     @Override
