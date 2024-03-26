@@ -24,7 +24,7 @@ public class Exam1 {
         // 데이터베이스의 raw data(가공하지 않은 순수 데이터)를
         //Students 객체형태로 만들고 이를 배열에 담는다.
 
-        Object[] students = new Object[names.length]; // Object 대신 Students도 사용 가능
+        Students[] students = new Students[names.length]; // Students 대신 Object 사용 가능
         for (int i=0; i < students.length; i++){
             students[i] = new Students(names[i], departments[i], studentsIds[i]);
             System.out.println(students[i].toString());
