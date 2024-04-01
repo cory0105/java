@@ -3,11 +3,11 @@ package Project._0328._3;
 import java.util.ArrayList;
 
 public class Review {
-    int reviewId;
-    int rating;
-    String text;
-    String loginId;
-    int lectureId;
+    private int reviewId;
+    private int rating; // 1~10
+    private String text;
+    private String loginId;
+    private int lectureId;
     public Review() {
     }
     public Review(int reviewId, int rating, String text, String loginId, int lectureId) {
@@ -18,8 +18,55 @@ public class Review {
         this.lectureId = lectureId;
     }
 
+    public int getReviewId() {
+        return reviewId;
+    }
 
-// 리뷰평 없어도 됨
+    public int getRating() {
+        return rating;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public String getLoginId() {
+        return loginId;
+    }
+
+    public int getLectureId() {
+        return lectureId;
+    }
+
+    public static ArrayList<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviewId(int reviewId) {
+        this.reviewId = reviewId;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setLoginId(String loginId) {
+        this.loginId = loginId;
+    }
+
+    public void setLectureId(int lectureId) {
+        this.lectureId = lectureId;
+    }
+
+    public static void setReviews(ArrayList<Review> reviews) {
+        Review.reviews = reviews;
+    }
+
+    // 리뷰평 없어도 됨
 // 생성객체는 ArrayList 로 관리
 // 아래의 경우 메서드가 false 를 리턴
 //  - 점수는 1~10 사이
@@ -38,8 +85,8 @@ public class Review {
         }
 
         // 유저가 하나의 강의에 한 번 리뷰 남김
-        for (int i=0; i<reviews.size(); i++){
-            if (reviews.get(i).lectureId == lectureId && reviews.get(i).loginId.equals(loginId)){
+        for (Review review:reviews){
+            if (review.lectureId == lectureId && review.loginId.equals(loginId)){
                 System.out.println("이미 리뷰를 등록한 강의입니다.");
                 return false;
             }
@@ -90,6 +137,6 @@ public class Review {
 
     @Override
     public String toString() {
-        return "reviewId:" + reviewId + ", rating:" + rating +  ", text:" + text + ", loginId:" + loginId + ", lectureId:" + lectureId + "\n";
+        return "(reviewId:" + reviewId + ", rating:" + rating +  ", text:" + text + ", loginId:" + loginId + ", lectureId:" + lectureId + ")";
     }
 }
