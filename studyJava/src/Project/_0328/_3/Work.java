@@ -1,5 +1,7 @@
 package Project._0328._3;
 
+import java.util.ArrayList;
+
 public class Work extends InfoCreate {
     void lectureIdFindLoginId(int lectureId) {
         for (int i = 0; i < lectureRegistrations.size(); i++) {
@@ -82,5 +84,34 @@ public class Work extends InfoCreate {
             }
         }
         System.out.println();
+    }
+
+    String getTeacherByLectureId(int lectureId){
+        String teacherId = "";
+        for (int i=0; i<lectureTeachers.size(); i++){
+            if (lectureTeachers.get(i).getLectureId()==lectureId){
+                teacherId = lectureTeachers.get(i).getTeacherId();
+            }
+        }
+        for (int j=0; j<teachers.size(); j++){
+            if (teachers.get(j).getTeacherId().equals(teacherId)){
+                return teachers.get(j).name;
+            }
+        }
+        return "입력값을 다시 확인하시오";
+    }
+
+    public ArrayList<String> getLectureTitleListByTeacherId(String teacherId){
+        ArrayList<String> lectureTeacher = new ArrayList<>();
+        for (int i=0; i<lectureTeachers.size(); i++){
+            if (teacherId.equals(lectureTeachers.get(i).getTeacherId())){
+                for (int j=0; j<lectures.size(); j++){
+                    if (lectureTeachers.get(i).getLectureId()==lectures.get(j).getLectureId()){
+                        lectureTeacher.add(lectures.get(j).getTitle());
+                    }
+                }
+            }
+        }
+        return lectureTeacher;
     }
 }

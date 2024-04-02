@@ -7,6 +7,8 @@ public class InfoCreate {
     static ArrayList<User> users = new ArrayList<>();
     static ArrayList<Lecture> lectures = new ArrayList<>();
     static ArrayList<LectureRegistration> lectureRegistrations = new ArrayList<>();
+    static ArrayList<Teacher> teachers = new ArrayList<>();
+    static ArrayList<LectureTeacher> lectureTeachers = new ArrayList<>();
     static {
         User user1 = new User("Steve", "hero11", "pass"
                 , LocalDate.of(1999, 1, 1), "steve@email.com");
@@ -46,5 +48,21 @@ public class InfoCreate {
         lectureRegistrations.add(lectureRegistration4);
         LectureRegistration lectureRegistration5 = new LectureRegistration("goodlife", 1);
         lectureRegistrations.add(lectureRegistration5);
+
+        Teacher teacher1 = new Teacher("t1","teacher1","tt1",LocalDate.of(2024,10,1),"t1@email.com");
+        teachers.add(teacher1);
+        Teacher teacher2 = new Teacher("t2","teacher2","tt2",LocalDate.of(2024,10,1),"t2@email.com");
+        teachers.add(teacher2);
+        Teacher teacher3 = new Teacher("t3","teacher3","tt3",LocalDate.of(2024,10,1),"t3@email.com");
+        teachers.add(teacher3);
+        Teacher teacher4 = new Teacher("t4","teacher4","tt4",LocalDate.of(2024,10,1),"t4@email.com");
+        teachers.add(teacher4);
+
+        LectureTeacher lectureTeacher1 = new LectureTeacher("t1",1);
+        lectureTeachers.add(lectureTeacher1);
+        LectureTeacher lectureTeacher2 = new LectureTeacher("t2",2);
+        lectureTeachers.add(lectureTeacher2);
+        LectureTeacher lectureTeacher3 = new LectureTeacher("t1",3);
+        lectureTeachers.add(lectureTeacher3);
     }
 }

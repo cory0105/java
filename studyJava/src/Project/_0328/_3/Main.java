@@ -1,5 +1,7 @@
 package Project._0328._3;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Work work = new Work();
@@ -42,5 +44,23 @@ public class Main {
         }
 
         System.out.println(review.reviews.toString());
+        System.out.println();
+
+        System.out.println(work.getTeacherByLectureId(1));
+        System.out.println(work.getLectureTitleListByTeacherId("t1"));
+
+        FreeBoard freeBoard = new FreeBoard();
+        Reply reply = new Reply();
+
+        freeBoard.createFreeBoard("안녕","sue입니다","sue");
+        freeBoard.createFreeBoard("안녕","tommy입니다","tommy");
+        freeBoard.createFreeBoard("안녕","nice입니다","nice");
+        freeBoard.createFreeBoard("다시옴","sue입니다","sue");
+        reply.createReply("저는 tommy입니다.","tommy",0);
+        reply.createReply("저는 nice입니다.","nice",0);
+        reply.createReply("tommy 다시옴","tommy",3);
+
+        System.out.println(freeBoard.freeBoards.toString());
+        System.out.println();
     }
 }
