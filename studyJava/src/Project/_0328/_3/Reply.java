@@ -50,6 +50,6 @@ public class Reply extends FreeBoard{
     }
 
     public String toString(){
-        return  id + content + loginId + freeBoardId;
+        return  id + " " + content + " " + loginId + " " + freeBoardId;
     }
 }

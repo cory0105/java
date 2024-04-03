@@ -1,54 +1,59 @@
 package Project._0328._3;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Work extends InfoCreate {
-    void lectureIdFindLoginId(int lectureId) {
+    List<String> lectureIdFindLoginId(int lectureId) {
+        List<String> strings = new ArrayList<>();
         for (int i = 0; i < lectureRegistrations.size(); i++) {
             if (lectureRegistrations.get(i).getLectureId() == lectureId) {
-                System.out.println(lectureRegistrations.get(i).getUserId());
+                strings.add(lectureRegistrations.get(i).getUserId());
             }
         }
-        System.out.println();
+        return strings;
     }
 
-    void loginIdFindTitle(String loginId) {
-        out3:
+    List<String> loginIdFindTitle(String loginId) {
+        List<String> strings = new ArrayList<>();
         for (int i = 0; i < lectureRegistrations.size(); i++) {
             if (lectureRegistrations.get(i).userId.equals(loginId)) {
                 int lectureId = lectureRegistrations.get(i).lectureId;
                 for (int j = 0; j < lectures.size(); j++) {
                     if (lectures.get(j).lectureId == lectureId) {
-                        System.out.println(lectures.get(j).getTitle());
-                        break out3;
+                        strings.add(lectures.get(j).getTitle());
+                        break;
                     }
                 }
             }
         }
-        System.out.println();
+        return strings;
     }
 
 
-    void titleFindEmail1(String title) {
+    List<String> titleFindEmail1(String title) {
+        List<String> strings = new ArrayList<>();
         for (int i = 0; i < lectures.size(); i++) {
             if (title.equals(lectures.get(i).title)) {
                 for (int j = 0; j < lectureRegistrations.size(); j++) {
                     if (lectures.get(i).lectureId == lectureRegistrations.get(j).lectureId) {
                         for (int x = 0; x < users.size(); x++) {
                             if (lectureRegistrations.get(j).userId.equals(users.get(x).loginId)) {
-                                System.out.println(users.get(x).email);
+                                strings.add(users.get(x).email);
                                 break;
                             }
                         }
                     }
                 }
             }
+            break;
         }
-        System.out.println();
+        return strings;
     }
 
 
-    void titleFindEmail2(String title) {
+    List<String> titleFindEmail2(String title) {
+        List<String> strings = new ArrayList<>();
         int lectureId = -1;
         for (int i = 0; i < lectures.size(); i++) {
             if (title.equals(lectures.get(i).title)) {
@@ -57,33 +62,34 @@ public class Work extends InfoCreate {
             }
         }
         if (lectureId<0){
-            return;
+            return strings;
         }
         for (int j = 0; j < lectureRegistrations.size(); j++) {
             if (lectureId == lectureRegistrations.get(j).lectureId) {
                 for (int x = 0; x < users.size(); x++) {
                     if (lectureRegistrations.get(j).userId.equals(users.get(x).loginId)) {
-                        System.out.println(users.get(x).email);
+                        strings.add(users.get(x).email);
                         break;
                     }
                 }
             }
         }
+        return strings;
     }
-    void loginIdFindCategory(String loginId) {
-        out3:
+    List<Category> loginIdFindCategory(String loginId) {
+        List<Category> strings = new ArrayList<>();
         for (int i = 0; i < lectureRegistrations.size(); i++) {
             if (lectureRegistrations.get(i).userId.equals(loginId)) {
                 int lectureId = lectureRegistrations.get(i).lectureId;
                 for (int j = 0; j < lectures.size(); j++) {
                     if (lectures.get(j).lectureId == lectureId) {
-                        System.out.println(lectures.get(j).getCategory());
-                        break out3;
+                        strings.add(lectures.get(j).getCategory());
+                        break;
                     }
                 }
             }
         }
-        System.out.println();
+        return strings;
     }
 
     String getTeacherByLectureId(int lectureId){

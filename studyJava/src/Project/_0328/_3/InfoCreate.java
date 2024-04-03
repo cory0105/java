@@ -48,6 +48,8 @@ public class InfoCreate {
         lectureRegistrations.add(lectureRegistration4);
         LectureRegistration lectureRegistration5 = new LectureRegistration("goodlife", 1);
         lectureRegistrations.add(lectureRegistration5);
+        LectureRegistration lectureRegistration6 = new LectureRegistration("nice", 1);
+        lectureRegistrations.add(lectureRegistration6);
 
         Teacher teacher1 = new Teacher("t1","teacher1","tt1",LocalDate.of(2024,10,1),"t1@email.com");
         teachers.add(teacher1);

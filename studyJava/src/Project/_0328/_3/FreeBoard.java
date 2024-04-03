@@ -67,7 +67,7 @@ public class FreeBoard {
     }
 
     public String toString(){
-        return id + title + content + loginId + replies;
+        return id + " " + title + " " + content + " " + loginId + " " + replies + "\n";
     }
 }
 

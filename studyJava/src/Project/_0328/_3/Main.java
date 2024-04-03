@@ -5,12 +5,13 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Work work = new Work();
-        work.lectureIdFindLoginId(1);
-        work.loginIdFindTitle("nice");
-        work.titleFindEmail1("Java");
-        work.titleFindEmail2("Java");
-        work.loginIdFindCategory("nice");
-        Review review = new Review();
+        System.out.println(work.lectureIdFindLoginId(1));
+        System.out.println(work.loginIdFindTitle("nice"));
+        System.out.println(work.titleFindEmail1("Java"));
+        System.out.println(work.titleFindEmail2("Java"));
+        System.out.println(work.loginIdFindCategory("nice"));
+        System.out.println();
+
 
         // 생성객체는 ArrayList 로 관리
         // 1. 리뷰평 없어도 됨
@@ -23,6 +24,7 @@ public class Main {
             // 예) createReview("hero11",1,100,"좋은 강의"); // 점수 에러이므로 false 리턴
             // 예) createReview("tommy",3,100,"좋은 강의"); // tommy 는 3번을 수강 안하므로 false 리턴
 
+        Review review = new Review();
         if (review.createReview("hero11",1,10)){ // 1번 해결:리뷰평 없어도 됨(hero11은 1을 수강함)
             System.out.println("리뷰가 정상적으로 작성되었습니다.");
         }
@@ -48,6 +50,7 @@ public class Main {
 
         System.out.println(work.getTeacherByLectureId(1));
         System.out.println(work.getLectureTitleListByTeacherId("t1"));
+        System.out.println();
 
         FreeBoard freeBoard = new FreeBoard();
         Reply reply = new Reply();
@@ -60,7 +63,7 @@ public class Main {
         reply.createReply("저는 nice입니다.","nice",0);
         reply.createReply("tommy 다시옴","tommy",3);
 
-        System.out.println(freeBoard.freeBoards.toString());
+        System.out.println(FreeBoard.freeBoards.toString());
         System.out.println();
     }
 }
