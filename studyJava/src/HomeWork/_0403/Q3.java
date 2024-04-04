@@ -11,5 +11,11 @@ public class Q3 {
         // 단, 중복 문자열은 저장하지 말아야 함
 
         // 여기 코드 작성 !!
+        Scanner scanner = new Scanner(System.in);
+        Set<String> strings = new HashSet<>();
+        for (int i=0; i<5; i++){
+            strings.add(scanner.nextLine());
+        }
+        System.out.println(strings);
     }
 }

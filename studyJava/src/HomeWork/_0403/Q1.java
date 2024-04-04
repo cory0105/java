@@ -11,7 +11,14 @@ public class Q1 {
 
     public static String changeCase(String str) {
         // 여기 코드 작성 !!
-
-        return "";
+        String result = "";
+        for (int i=0; i<str.length(); i++){
+            if (str.charAt(i)>='a' && str.charAt(i)<='z'){
+                result = result + str.toUpperCase().charAt(i);
+            } else {
+                result = result + str.toLowerCase().charAt(i);
+            }
+        }
+        return result;
     }
 }
