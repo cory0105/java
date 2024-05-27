@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 import static Test._0404.InfoCreate.*;
 
-public class SingUpOrLogin {
+public clSingUpOrLogin {
     public static User chooseSignOrLogin(){
         Scanner scInt = new Scanner(System.in);
         System.out.print("회원이면 0, 회원이 아니면 1을 입력하시오 ");
